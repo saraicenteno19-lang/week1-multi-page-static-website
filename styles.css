@@ -73,7 +73,7 @@ section > h2 {
 }
 
 /* nth-child pseudo-class */
-ul li:nth-child(odd) {
+section ul li:nth-child(odd) {
     background-color: #f1f5f9;
 }
 
@@ -124,4 +124,18 @@ blockquote {
     color: #1d3557;
     padding: 5px 10px;
     border-radius: 5px;
+}
+.content-box {
+    background-color: white;
+    border: 2px solid #457b9d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.info-box {
+    background-color: #d9edee;
+    padding: 15px;
+    border-radius: 8px;
 }
