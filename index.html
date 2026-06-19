@@ -32,14 +32,11 @@
 
     <main>
 
-        <section class="search-area">
-            <h2>Search Information</h2>
-            <input type="text" id="searchInput" placeholder="Search Vancouver, mountains, parks, culture...">
-        </section>
+       
 
         <section class="main-layout">
 
-            <article class="large-card searchable">
+            <article class="large-card">
                 <img src="images/vancouver.avif" alt="Vancouver skyline with buildings and marina">
 
                 <div>
@@ -58,7 +55,7 @@
                 </div>
             </article>
 
-            <article class="side-card searchable">
+            <article class="side-card">
                 <h2>Why Visit Vancouver?</h2>
 
                 <p>
@@ -75,7 +72,7 @@
                 </ul>
             </article>
 
-            <article class="quote-box searchable">
+            <article class="quote-box">
                 <h2>Travel Note</h2>
 
                 <blockquote>
@@ -103,24 +100,7 @@
         </ul>
     </footer>
 
-    <script>
-        const searchInput = document.getElementById("searchInput");
-        const searchableCards = document.querySelectorAll(".searchable");
-
-        searchInput.addEventListener("keyup", function () {
-            const searchText = searchInput.value.toLowerCase();
-
-            searchableCards.forEach(function (card) {
-                const cardText = card.innerText.toLowerCase();
-
-                if (cardText.includes(searchText)) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
-    </script>
+   
 
 </body>
 </html>

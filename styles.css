@@ -217,3 +217,35 @@ footer li {
         grid-column: 1;
     }
 }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table, th, td {
+    border: 2px solid #0a2a43;
+}
+
+th {
+    background-color: #1b5e56;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f0e8;
+}
+
+tr:hover {
+    background-color: #e0efe9;
+}
