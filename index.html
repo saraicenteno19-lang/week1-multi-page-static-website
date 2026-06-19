@@ -9,56 +9,63 @@
 
 <body>
 
-    <header>
-        <h1>Vancouver Travel Guide</h1>
+    <header class="top-section">
+        <nav class="menu">
+            <h2 class="site-name">Vancouver Explorer</h2>
 
-        <nav>
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About Vancouver</a></li>
                 <li><a href="attractions.html">Attractions</a></li>
             </ul>
         </nav>
+
+        <div class="intro">
+            <p class="small-title">Canada Travel Destination</p>
+            <h1>Discover Vancouver</h1>
+            <p>
+                A modern city surrounded by mountains, ocean views, parks,
+                culture, and outdoor adventures.
+            </p>
+        </div>
     </header>
 
     <main>
 
-        <section class="content-box">
-
-            <div class="info-box">
-
-                <h2>Welcome to Vancouver</h2>
-
-                <img
-                    src="images/vancouver.avif"
-                    alt="Vancouver skyline with buildings and marina"
-                    width="700"
-                >
-
-                <p>
-                    Vancouver is one of the most beautiful cities in Canada.
-                    It is known for its natural scenery, modern downtown area,
-                    multicultural community, and outdoor activities.
-                </p>
-
-                <p>
-                    This website provides a simple guide to learn about Vancouver,
-                    its history, and some of its most popular attractions.
-                </p>
-
-            </div>
-
+        <section class="search-area">
+            <h2>Search Information</h2>
+            <input type="text" id="searchInput" placeholder="Search Vancouver, mountains, parks, culture...">
         </section>
 
-        <section class="content-box">
+        <section class="main-layout">
 
-            <div class="info-box">
+            <article class="large-card searchable">
+                <img src="images/vancouver.avif" alt="Vancouver skyline with buildings and marina">
 
+                <div>
+                    <h2>Welcome to Vancouver</h2>
+
+                    <p>
+                        Vancouver is one of the most beautiful cities in Canada.
+                        It is known for its natural scenery, modern downtown area,
+                        multicultural community, and outdoor activities.
+                    </p>
+
+                    <p>
+                        This website provides a simple guide to learn about Vancouver,
+                        its history, and some of its most popular attractions.
+                    </p>
+                </div>
+            </article>
+
+            <article class="side-card searchable">
                 <h2>Why Visit Vancouver?</h2>
 
-                <blockquote>
-                    "Vancouver is consistently ranked as one of the world's most livable cities."
-                </blockquote>
+                <p>
+                    Vancouver is a great place to visit because it combines city life
+                    with nature. Visitors can enjoy beaches, mountains, parks,
+                    restaurants, and cultural places.
+                </p>
 
                 <ul>
                     <li>Beautiful mountains and ocean views</li>
@@ -66,8 +73,15 @@
                     <li>Diverse food and culture</li>
                     <li>Many outdoor activities year-round</li>
                 </ul>
+            </article>
 
-            </div>
+            <article class="quote-box searchable">
+                <h2>Travel Note</h2>
+
+                <blockquote>
+                    "Vancouver is consistently ranked as one of the world's most livable cities."
+                </blockquote>
+            </article>
 
         </section>
 
@@ -75,7 +89,38 @@
 
     <footer>
         <p>Created for the Week 1 Multi-Page Static Website Assignment.</p>
+
+        <h3>Sources</h3>
+
+        <p>
+            Information on this website was recovered from:
+        </p>
+
+        <ul>
+            <li>Destination Vancouver: https://www.destinationvancouver.com</li>
+            <li>City of Vancouver: https://vancouver.ca</li>
+            <li>Destination Canada: https://travel.destinationcanada.com</li>
+        </ul>
     </footer>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const searchableCards = document.querySelectorAll(".searchable");
+
+        searchInput.addEventListener("keyup", function () {
+            const searchText = searchInput.value.toLowerCase();
+
+            searchableCards.forEach(function (card) {
+                const cardText = card.innerText.toLowerCase();
+
+                if (cardText.includes(searchText)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
